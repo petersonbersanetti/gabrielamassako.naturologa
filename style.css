@@ -18,7 +18,6 @@ body {
     color: var(--text-color);
 }
 
-
 .header {
     position: fixed;
     top: 0;
@@ -30,7 +29,6 @@ body {
     align-items: center;
     z-index: 100;
 }
-
 
 .gabrielamassako {
     font-size: 1.7rem;
@@ -80,17 +78,17 @@ section {
 }
 
 .home .home-content {
-    max-width: 54rem;
+    max-width: 44rem;
 }
 
 .home-content h3{
-    font-size: 3.2rem;
+    font-size: 2.90rem;
     font-weight: 700;
     line-height: .3;
 }
 
 .home-content h1{
-    font-size: 5.6rem;
+    font-size: 4.7rem;
     font-weight: 700;
 }
 
@@ -150,6 +148,7 @@ section {
     pointer-events: none;
 }
 
+
 .home .profession-container .profession-box {
     position: absolute;
     top: 0;
@@ -160,7 +159,6 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .home .profession-box .profession {
@@ -173,7 +171,7 @@ section {
     transform: rotate(calc(360deg/4*var(--i)));
     transform-origin: 384px;
     background: var(--bg-color);
-    padding: 13px;
+    padding: 13px 0;
 }
 
 .home .profession-box .profession:nth-child(1) i {
@@ -181,7 +179,7 @@ section {
 }
 
 .home .profession-box .profession:nth-child(2), 
-.home .profession-box .profession:nth-child(2) {
+.home .profession-box .profession:nth-child(4) {
     padding-bottom: 20px;
 }
 
@@ -211,7 +209,7 @@ section {
     border-top: 384px solid var(--main-color);
     border-right: 384px solid var(--main-color);
     border-bottom: 384px solid var(--main-color);
-    border-left: 384px solid transparent;
+    border-left: 384px solid transparent
 }
 
 .home-img img{
@@ -220,4 +218,39 @@ section {
     right: 0;
     width: 43%;
     pointer-events: none;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.about-img img {
+    width: 40vw;
+}
+
+.heading {
+    font-size: 4.5rem;
+    text-align: center;
+}
+
+.about-content h2 {
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-content h3 {
+    font-size: 2rem;
+}
+
+
+.about-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
 }
