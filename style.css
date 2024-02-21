@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-	--bg-color: #fdfdfd;
-	--text-color: #333;
-	--main-color: #754ef9;
-	--white-color: #fdfdfd;
-	--shadow-color: rgba(0,0,0, .2);
+    --bg-color: #fdfdfd;
+    --text-color: #333;
+    --main-color: #754ef9;
+    --white-color: #fdfdfd;
+    --shadow-color: rgba(0, 0, 0, .2);
 }
 
 html {
@@ -24,15 +24,17 @@ body {
     left: 0;
     width: 100%;
     padding: 2rem 7%;
-    background: transparent;
+    background: var(--text-color);
     display: flex;
     align-items: center;
     z-index: 100;
+    transition: background-color 0.3s;
 }
+
 
 .gabrielamassako {
     font-size: 1.7rem;
-    color: var(--main-color);
+    color: var(--bg-color);
     font-weight: 600;
     cursor: default;
     margin-right: auto;
@@ -41,6 +43,10 @@ body {
     align-items: center;
     align-items: flex-start;
     flex-direction: column;
+}
+
+.gabrielamassako a:visited {
+    color: var(--bg-color);
 }
 
 .navbar a {
@@ -81,18 +87,18 @@ section {
     max-width: 44rem;
 }
 
-.home-content h3{
+.home-content h3 {
     font-size: 2.90rem;
     font-weight: 700;
     line-height: .3;
 }
 
-.home-content h1{
+.home-content h1 {
     font-size: 4.7rem;
     font-weight: 700;
 }
 
-.home-content p{
+.home-content p {
     font-size: 1.6rem;
 }
 
@@ -137,19 +143,20 @@ section {
     border-color: var(--main-color);
 }
 
-.home .profession-container {
+/*.home .profession-container {
     position: absolute;
-    top: 50%;
+    top: 0;
     right: 0;
     transform: translateY(-50%);
-    width: 768px;
-    height: 768px;
+    width: 50%;
+    height: 100%;
     overflow: hidden;
     pointer-events: none;
-}
+} */
 
 
 .home .profession-container .profession-box {
+    /*circulo*/
     position: absolute;
     top: 0;
     right: 0;
@@ -162,6 +169,7 @@ section {
 }
 
 .home .profession-box .profession {
+    /*rotaçao da escrita*/
     position: absolute;
     left: 0;
     display: flex;
@@ -178,7 +186,7 @@ section {
     margin-right: 15px;
 }
 
-.home .profession-box .profession:nth-child(2), 
+.home .profession-box .profession:nth-child(2),
 .home .profession-box .profession:nth-child(4) {
     padding-bottom: 20px;
 }
@@ -190,7 +198,7 @@ section {
 .home .profession h3 {
     font-size: 3.2rem;
     line-height: 1;
-    font-weight: 600;    
+    font-weight: 600;
 }
 
 .home .profession-box .circle {
@@ -200,25 +208,38 @@ section {
     border-radius: 50%;
 }
 
-.home .profession-container .overlay {
+/*.home .profession-container .overlay {
     position: absolute;
     top: 0;
     right: 0;
-    width: 0;
-    height: 0;
+    width: 100%;
+    height: 100%;
     border-top: 384px solid var(--main-color);
     border-right: 384px solid var(--main-color);
     border-bottom: 384px solid var(--main-color);
     border-left: 384px solid transparent
+    background: var(--main-color);
+    clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 50% 50%, 0% 0%);
+} */
+
+.home-img-purple img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vh;
+    pointer-events: none;
 }
 
-.home-img img{
+.home-img img {
     position: absolute;
     bottom: 0;
     right: 0;
     width: 43%;
     pointer-events: none;
 }
+
+
 
 span {
     color: var(--main-color);
@@ -249,8 +270,137 @@ span {
     font-size: 2rem;
 }
 
+.services {
+    min-width: auto;
+    padding-bottom: 7rem;
+}
+
+.services h2 {
+    margin-bottom: 5rem;
+}
 
 .about-content p {
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
+}
+
+.services .services-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.services .services-container .services-box {
+    flex: 1 1 30rem;
+    background: var(--bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    box-shadow: 0 .1rem 5rem var(--shadow-color);
+    text-align: center;
+    border-top: .6rem solid var(--main-color);
+    border-bottom: .6rem solid var(--main-color);
+    transition: .5s ease;
+}
+
+.services-container .services-box:hover {
+    box-shadow: 0 .1rem 2rem var(--shadow-color);
+    transform: scale(1.02);
+}
+
+.services-box i {
+    font-size: 7rem;
+    color: var(--main-color);
+}
+
+.services-box h3 {
+    font-size: 2.6rem;
+}
+
+.services-box:hover h3 {
+    color: var(--main-color);
+}
+
+.services-box p {
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+}
+
+.portfolio {
+    padding-bottom: 10rem;
+}
+
+.portfolio h2 {
+    margin-bottom: 4rem;
+}
+
+.portfolio .portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.portfolio-container .portfolio-box {
+    position: relative;
+    display: flex;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
+    overflow: hidden;
+}
+
+.portfolio-box img {
+    width: 100%;
+    transition: .5s ease;
+}
+
+.portfolio-box:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-box .portfolio-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0, .1), var(--main-color));
+    color: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.portfolio-box:hover .portfolio-layer {
+    opacity: 1;
+}
+
+.portfolio-layer h4 {
+    font-size: 3rem;
+}
+
+.portfolio-layer p {
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem;
+}
+
+.portfolio-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--white-color);
+    border-radius: 50%;
+}
+
+.portfolio-layer a i {
+    font-size: 2rem;
+    color: #333;
 }
