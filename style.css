@@ -65,10 +65,10 @@ body {
     color: var(--main-color);
 }
 
-#darkMode-icon {
-    font-size: 2.4rem;
+#menu-icon {
+    font-size: 3.6rem;
     color: var(--white-color);
-    cursor: pointer;
+    display: none;
 }
 
 section {
@@ -141,29 +141,18 @@ section {
     border-color: var(--main-color);
 }
 
-/*.home .profession-container {
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translateY(-50%);
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-    pointer-events: none;
-} */
-
-
 .home .profession-container .profession-box {
     /*circulo*/
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 50%;
+    left: 78%;
     width: 768px;
     height: 768px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: translate(-50%, -50%);
 }
 
 .home .profession-box .profession {
@@ -206,19 +195,6 @@ section {
     border-radius: 50%;
 }
 
-/*.home .profession-container .overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    border-top: 384px solid var(--main-color);
-    border-right: 384px solid var(--main-color);
-    border-bottom: 384px solid var(--main-color);
-    border-left: 384px solid transparent
-    background: var(--main-color);
-    clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 50% 50%, 0% 0%);
-} */
 
 .home-img-purple img {
     position: absolute;
@@ -357,13 +333,13 @@ span {
     transform: scale(1.1);
 }
 
-.portfolio-box .portfolio-layer{
+.portfolio-box .portfolio-layer {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0,0,0, .1), var(--main-color));
+    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
     color: var(--white-color);
     display: flex;
     justify-content: center;
@@ -425,7 +401,7 @@ span {
     width: 100%;
     padding: 1.5rem;
     font-size: 1.6rem;
-    color: --text-color
+    color: --text-color;
     background: var(--bg-color);
     border-radius: .8rem;
     margin: .7rem 0;
@@ -436,7 +412,7 @@ span {
     width: 49%;
 }
 
-.contact form textarea{
+.contact form textarea {
     resize: none;
 }
 
@@ -476,6 +452,90 @@ span {
     color: var(--text-color);
 }
 
-.footer-iconTop a:hover{
+.footer-iconTop a:hover {
     outline-color: var(--white-color)
+}
+
+/*BREAKPOINTS*/
+
+@media (max-width: 1366px) {
+    .home .profession-container .profession-box {
+        left: 110rem;
+        height: 85.8rem;
+    }
+
+    .home-img-purple img {
+        left: 50rem;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .home .home-content {
+        max-width: 50rem;
+    }
+
+    .home .profession-container .profession-box {
+        left: 105rem;
+        height: 85.8rem;
+    }
+    
+    .home-img img{
+        display: none;
+    }
+
+    .home-img-purple img {
+        left: 40rem;
+    }
+
+    .services,
+    .portfolio {
+        padding-bottom: 7rem;
+    }
+
+    .contact{
+        min-height: auto;
+    }
+
+    .footer{
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        display: none;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: var(--text-color);
+    }
+
+    .navbar a::before {
+        display: none;
+    }
+}
+
+
+
+@media (max-width: 414px) {
 }
