@@ -18,7 +18,7 @@ body {
     background: var(--text-color);
     display: flex;
     align-items: center;
-    z-index: 100;
+    z-index: 997;
     transition: background-color 0.3s;
 }
 
@@ -34,6 +34,26 @@ body {
     align-items: center;
     align-items: flex-start;
     flex-direction: column;
+}
+
+#check{
+    display: none;
+    width: 20px;
+    height: 30px;
+    transform: translateX(3rem);
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--white-color);
+    display: none;
+    top: 20%;
+}
+
+#close-icon {
+    display: none;
+    font-size:3.7rem;
+    color: var(--white-color);
 }
 
 .gabrielamassako a,
@@ -56,11 +76,6 @@ body {
     color: var(--main-color);
 }
 
-#menu-icon {
-    font-size: 3.6rem;
-    color: var(--white-color);
-    display: none;
-}
 
 section {
     min-height: 100vh;
@@ -403,6 +418,47 @@ section {
 }
 
 @media screen and (max-width: 992px) { /*==TABLET GRANDE==*/
+    
+    #check{
+        display: none;
+        z-index: 1000;
+    }
+
+    #menu-icon{
+        display: block;
+        z-index: 1003;
+    }
+
+    .header .menu-mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        height: 50vh;
+        position: fixed;
+        top:7%;
+        right: -100%;
+        background-color: var(--text-color);
+        transition: all 0.2s ease-in-out;
+    }
+
+    .navbar .menu-mobile a {
+        margin: 25px;
+        margin-top: 18px;
+        font-size: 2rem;
+    }
+
+    #check:checked + .navbar .menu-mobile {
+        right: 0;
+    }
+
+
+
+    #check:not(:checked) + .navbar .menu-mobile {
+        right: -100%;
+    }
+
     .header {
         padding: 2rem 3%;
     }
