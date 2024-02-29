@@ -453,8 +453,6 @@ section {
         right: 0;
     }
 
-
-
     #check:not(:checked) + .navbar .menu-mobile {
         right: -100%;
     }
