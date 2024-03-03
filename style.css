@@ -480,7 +480,7 @@ section {
 
 }
 
-@media screen and (max-width: 768px) { /*==SMARTPHONE==*/
+@media screen and (max-width: 768px) { /*==TABLET==*/
 
     .home {
         padding: 13rem 3% 23rem;
